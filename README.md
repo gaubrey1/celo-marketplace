@@ -3,7 +3,7 @@
 - A simple marketplace dapp built on the Celo blockchain that allow users to list their items for sale, purchase items, view listed items. Additionally, users can gift their product to other users of their choice by simply using their wallet address.
 
 ## Built With
-Celo Composer is built on Celo to make it simple to build dApps using a variety of front-end frameworks, and libraries.
+This project is built on Celo using Celo Composer to make it simple to build dApps using a variety of front-end frameworks, and libraries.
 
 - [Celo](https://celo.org/)
 - [Solidity](https://docs.soliditylang.org/en/v0.8.19/)
