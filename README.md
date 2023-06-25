@@ -1,6 +1,6 @@
 # CELO MARKETPLACE FRONTEND
 - Demo: [Celo Marketplace Frontend](https://celo-marketplace-react-app.vercel.app/)
-- A simple marketplace dapp built on the Celo blockchain that allow users to list their items for sale, purchase items, view listed items. Additionally, users can gift their product to other users of their choice by simply using their wallet address.
+- A simple marketplace dapp built on the Celo blockchain that allow users to list their items for sale, purchase items, view listed items. Additionally, users can gift their items to a user of their choice by simply using the user's wallet address.
 
 ## Built With
 This project is built on Celo using Celo Composer to make it simple to build dApps using a variety of front-end frameworks, and libraries.
