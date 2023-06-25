@@ -1,24 +1,8 @@
-# CELO MARKETPLACE
-- Demo: [Marketplace](https://celo-frontend-eta.vercel.app/)
-
-## About The Project
-- A simple marketplace dapp built on the Celo blockchain. The decentralized marketplace application will allow users to list their items for sale, purchase items, view listed items and lookup products they purchased or uploaded on their profile. It is built on the pre-existing marketplace smart contract with added functionalities and an improved frontend page. The following functionalities were added
-
-1. To the smart contract
-- A `supply` property to the `Product` struct
-- A `userProducts` mapping to store all the products bought by a user.
-- A `buyAllProduct()` function that enables users to buy all available supply of a particular product at the specified price.
-
-2. To the frontend
-- Display of the available supply of a particular product.
-- A `Profile.tsx` component to display all the products uploaded and purchased by a user.
-- A `buy all` button to allow users by all the available supply of a particular product.
-- A `useOwner` hook to get all the products purchased by a user from the smart contract.
-- A `useBuyAllProduct` hook to buy all the available supply of a particular product.
-
+# CELO MARKETPLACE FRONTEND
+- Demo: [Celo Marketplace Frontend](https://celo-marketplace-react-app.vercel.app/)
+- A simple marketplace dapp built on the Celo blockchain that allow users to list their items for sale, purchase items, view listed items. Additionally, users can gift their product to other users of their choice by simply using their wallet address.
 
 ## Built With
-
 Celo Composer is built on Celo to make it simple to build dApps using a variety of front-end frameworks, and libraries.
 
 - [Celo](https://celo.org/)
@@ -28,13 +12,11 @@ Celo Composer is built on Celo to make it simple to build dApps using a variety 
 - [Rainbowkit-celo](https://github.com/celo-org/rainbowkit-celo)
 
 ## Prerequisites
-
 - Node
 - Git (v2.38 or higher)
 
 ## Quick Start
-
-To get this project up running locally, follow these simple steps:
+- To get this project up running locally, follow these simple steps:
 
 1. Clone the repository:
 
@@ -76,9 +58,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your new feature branch (`git checkout -b feature/new_feature`)
-3. Commit your changes (`git commit -m 'icluded a new feature(s)'`)
-4. Push to the branch (`git push origin feature/new_feature`)
+2. Create your new feature branch (`git checkout -b feature/added_feature`)
+3. Commit your changes (`git commit -m 'icluded a added feature(s)'`)
+4. Push to the branch (`git push origin feature/added_feature`)
 5. Open a pull request
 
 
