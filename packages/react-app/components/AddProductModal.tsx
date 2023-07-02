@@ -36,13 +36,26 @@ const AddProductModal = () => {
   // The displayBalance state is used to store the cUSD balance of the user
   const [displayBalance, setDisplayBalance] = useState(false);
 
+  function isValidUrl(url:string) {
+    let isValid = false;
+  
+    try {
+      const parsedUrl = new URL(url);
+      isValid = true;
+    } catch (error) {
+      isValid = false;
+    }
+  
+    return isValid;
+  }
+
   // Check if all the input fields are filled
   const isComplete =
-    productName &&
-    productPrice &&
-    productImage &&
-    productLocation &&
-    productDescription;
+    productName.length > 1 &&
+    productPrice > 0 &&
+    isValidUrl(productImage) &&
+    productLocation.length > 1  &&
+    productDescription.split(" ").length > 1;
 
   // Clear the input fields after the product is added to the marketplace
   const clearForm = () => {
@@ -222,7 +235,7 @@ const AddProductModal = () => {
                     <button
                       type="submit"
                       disabled={!!loading || !isComplete || !createProduct}
-                      className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
+                      className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2 disabled:bg-blue-200 disabled:hover:bg-blue-100"
                     >
                       {loading ? loading : "Create"}
                     </button>
