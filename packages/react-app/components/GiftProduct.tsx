@@ -11,11 +11,23 @@ const GiftModal = (productId:any) => {
   const [visible, setVisible] = useState(false);
   // The following states are used to store the values of the form fields
   const [recipientAddress, setRecipientAddress] = useState("");
+  // Controls the button state
+  const [disabled, setDisabled] = useState(false)
   // The loading state is used to display a loading message
   const [loading, setLoading] = useState("");
 
   // Clear the input fields after the product is added to the marketplace
   const clearForm = () => setRecipientAddress("");
+
+  function isValidEthereumAddress(address: string): boolean {
+    // Remove the 0x prefix if present
+    const cleanedAddress = address.replace(/^0x/i, '');
+  
+    // Check if the address is a 40-character hexadecimal string
+    const isHex = /^[0-9a-fA-F]{40}$/.test(cleanedAddress);
+  
+    return !isHex;
+  }
 
 
     // Use the useContractSend hook to use our writeProduct function on the marketplace contract and add a product to the marketplace
@@ -80,6 +92,7 @@ const GiftModal = (productId:any) => {
                     <label>Recipient Address</label>
                     <input
                       onChange={(e) => {
+                        setDisabled(isValidEthereumAddress(e.target.value));
                         setRecipientAddress(e.target.value);
                       }}
                       required
@@ -103,8 +116,8 @@ const GiftModal = (productId:any) => {
                         e.preventDefault();
                         handleGiftProduct();
                       }}
-                      disabled={!!loading || !recipientAddress || !gift}
-                      className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
+                      disabled={!!loading || !recipientAddress || !gift || disabled}
+                      className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2 disabled:bg-blue-200 disabled:hover:bg-blue-200"
                     >
                       {loading ? loading : "Gift"}
                     </button>
